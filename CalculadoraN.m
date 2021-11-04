@@ -43,3 +43,13 @@ title = 'Confirm Save';
 selection = uiconfirm(fig,msg,title, ...
            'Options',{'Overwrite','Save as new','Cancel'}, ...
            'DefaultOption',1,'CancelOption',3);
+       
+%% Generar numeros aleatorios en un rango, exepto alguno
+clear all
+clc
+% Generar M enteros aleatorios entre 1 y N.
+% Excepto un entero arbitrario b; 1<= b<=N
+N=100; b=15; M=2; %example data
+%lista=setdiff(1:N,b);
+lista=setdiff(1:N,b);
+seleccion =lista(randperm(N-1,M))  %result
